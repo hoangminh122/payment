@@ -26,7 +26,7 @@ export const databaseProvider = {
     }
 
     const sequelize = new Sequelize({...config });
-    sequelize.addModels([Bills]);
+    sequelize.addModels([Bills,Customers,DetailBills,Products,Staffs]);
     await sequelize.sync({ force: false });
     return sequelize;
   },
